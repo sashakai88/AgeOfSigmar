@@ -16,6 +16,14 @@ from army_builder import create_army_roster, display_army_roster
 from battle import play_battle
 from utilities import print_header, print_box, get_integer_input, get_yes_no_input
 
+# Try to import graphics module
+try:
+    from graphical_game import (play_graphical_battle_interactive,
+                                view_battlefield_graphically,
+                                GRAPHICS_AVAILABLE)
+except ImportError:
+    GRAPHICS_AVAILABLE = False
+
 
 # ============================================================================
 # MAIN MENU
@@ -31,18 +39,32 @@ def main_menu():
         print("MAIN MENU".center(60))
         print("=" * 60)
         print()
-        print("1. Create Army Roster (Player 1)")
-        print("2. Create Army Roster (Player 2)")
-        print("3. View Army Rosters")
-        print("4. Play Battle")
-        print("5. View Warscrolls")
-        print("6. Test Combat Sequence")
-        print("7. Save Game")
-        print("8. Load Game")
-        print("9. Exit")
+        print("ARMY BUILDING:")
+        print("  1. Create Army Roster (Player 1)")
+        print("  2. Create Army Roster (Player 2)")
+        print("  3. View Army Rosters")
+        print()
+        print("BATTLE:")
+        print("  4. Play Battle (Text Mode)")
+        if GRAPHICS_AVAILABLE:
+            print("  5. Play Battle (Graphics Mode) 🎨")
+            print("  6. View Battlefield (Graphics) 🖼️")
+        print()
+        print("OTHER:")
+        print("  7. View Warscrolls")
+        print("  8. Test Combat Sequence")
+        print("  9. Save Game")
+        print("  10. Load Game")
+        print("  11. Exit")
         print()
 
-        choice = get_integer_input("Select option: ", 1, 9)
+        if GRAPHICS_AVAILABLE:
+            print("  ✓ Graphics mode available")
+        else:
+            print("  ⚠ Graphics mode unavailable (install pygame)")
+
+        print()
+        choice = get_integer_input("Select option: ", 1, 11)
 
         if choice == 1:
             create_player_army(1)
@@ -53,14 +75,24 @@ def main_menu():
         elif choice == 4:
             start_battle()
         elif choice == 5:
-            browse_warscrolls()
+            if GRAPHICS_AVAILABLE:
+                start_graphical_battle()
+            else:
+                print("\n❌ Graphics mode not available. Install pygame first.")
         elif choice == 6:
-            test_combat_sequence()
+            if GRAPHICS_AVAILABLE:
+                view_battlefield_graphically()
+            else:
+                print("\n❌ Graphics mode not available. Install pygame first.")
         elif choice == 7:
-            save_game_state()
+            browse_warscrolls()
         elif choice == 8:
-            load_game_menu()
+            test_combat_sequence()
         elif choice == 9:
+            save_game_state()
+        elif choice == 10:
+            load_game_menu()
+        elif choice == 11:
             print("\nThanks for playing!")
             sys.exit(0)
 
@@ -130,6 +162,37 @@ def start_battle():
 
     # Start battle
     play_battle()
+
+
+def start_graphical_battle():
+    """Start a battle in graphics mode"""
+    print_header("START GRAPHICAL BATTLE")
+
+    # Check if both armies are created
+    if game_db.player1_army.regiment_count == 0:
+        print("\nPlayer 1 has not created an army yet!")
+        if get_yes_no_input("Create Player 1 army now?"):
+            create_player_army(1)
+        else:
+            return
+
+    if game_db.player2_army.regiment_count == 0:
+        print("\nPlayer 2 has not created an army yet!")
+        if get_yes_no_input("Create Player 2 army now?"):
+            create_player_army(2)
+        else:
+            return
+
+    # Reset game state
+    game_db.reset_game()
+
+    # Start graphical battle
+    if GRAPHICS_AVAILABLE:
+        play_graphical_battle_interactive()
+    else:
+        print("\n❌ Graphics mode not available!")
+        print("Falling back to text mode...")
+        play_battle()
 
 
 # ============================================================================

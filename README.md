@@ -2,10 +2,18 @@
 
 A comprehensive Python implementation of the Warhammer Age of Sigmar tabletop wargame system, based on the 4th Edition Core Rules.
 
+## 🎮 Now with 2D Graphics! 🎨
+
+Play in **graphical mode** with a full visual battlefield, interactive unit selection, and real-time battle display!
+
+![Graphics Mode Available](https://img.shields.io/badge/Graphics-Pygame-blue)
+![Python 3.7+](https://img.shields.io/badge/Python-3.7+-green)
+
 ## Overview
 
 This project implements a fully functional digital version of Warhammer Age of Sigmar, including:
 
+### Core Features
 - **Army Building**: Create army rosters with regiments and heroes
 - **Battle Management**: Complete battle sequence with all 7 phases
 - **Combat Resolution**: Full attack sequence (hit, wound, save, damage)
@@ -14,10 +22,21 @@ This project implements a fully functional digital version of Warhammer Age of S
 - **Objective Control**: Victory point scoring and objective control
 - **Damage System**: Damage allocation, ward saves, and model removal
 
+### Graphics Mode (NEW!)
+- **2D Visual Battlefield**: 44" × 60" battlefield with grid
+- **Interactive Units**: Click to select, view stats in real-time
+- **Range Indicators**: Visual movement and combat ranges
+- **Objective Markers**: Animated control zones
+- **Info Panel**: Live game state and unit details
+- **60 FPS Rendering**: Smooth, responsive graphics
+
 ## System Requirements
 
 - Python 3.7 or higher
-- No external dependencies required (uses only Python standard library)
+- **Optional**: Pygame 2.5+ for graphics mode
+  ```bash
+  pip install pygame
+  ```
 
 ## File Structure
 
@@ -36,12 +55,19 @@ AgeOfSigmar/
 ├── damage.py                # Damage allocation and model removal
 ├── objectives.py            # Objective control and scoring
 ├── battle.py                # Battle rounds and turn management
+├── graphics_engine.py       # 2D graphics rendering engine (NEW!)
+├── graphical_game.py        # Graphical game mode (NEW!)
 ├── Warscrolls_StormcastEternals.txt  # Stormcast warscroll data
 ├── Warscrolls_Skaven.txt    # Skaven warscroll data
-└── README.md                # This file
+├── requirements.txt         # Python package dependencies
+├── README.md                # This file
+├── QUICKSTART.md            # Quick start guide
+└── GRAPHICS_GUIDE.md        # Graphics mode guide (NEW!)
 ```
 
 ## How to Run
+
+### Quick Start (Text Mode)
 
 1. **Start the game:**
    ```bash
@@ -55,9 +81,36 @@ AgeOfSigmar/
    - Pick your general
 
 3. **Start a battle:**
-   - Select option 4 from the main menu
+   - Select option 4 for text mode
+   - OR option 5 for graphics mode (requires pygame)
    - Follow the deployment process
    - Play through battle rounds
+
+### Graphics Mode Setup
+
+1. **Install Pygame:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+   Or directly:
+   ```bash
+   pip install pygame
+   ```
+
+2. **Launch graphics mode:**
+   - Start the game: `python3 main.py`
+   - Create armies (options 1-2)
+   - Select option 5: "Play Battle (Graphics Mode)" 🎨
+   - OR option 6: "View Battlefield (Graphics)" 🖼️
+
+3. **Graphics controls:**
+   - **Left Click**: Select units
+   - **Space**: Deselect
+   - **ESC**: Exit
+   - Follow text prompts for phase actions
+
+For detailed graphics instructions, see [GRAPHICS_GUIDE.md](GRAPHICS_GUIDE.md)
 
 ## Game Features
 
