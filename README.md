@@ -1,12 +1,17 @@
 # Warhammer Age of Sigmar - Game Management System
 
-A comprehensive Python implementation of the Warhammer Age of Sigmar tabletop wargame system, based on the 4th Edition Core Rules.
+A comprehensive implementation of the Warhammer Age of Sigmar tabletop wargame system, based on the 4th Edition Core Rules.
 
-## 🎮 Now with 2D Graphics! 🎨
+## 🎮 Available in Two Versions! 🎨
 
+### Python + Pygame Version
 Play in **graphical mode** with a full visual battlefield, interactive unit selection, and real-time battle display!
 
+### GameMaker Studio 2 Version (NEW!)
+Complete **GameMaker implementation** with professional 2D graphics, WASD camera controls, and mouse-driven gameplay!
+
 ![Graphics Mode Available](https://img.shields.io/badge/Graphics-Pygame-blue)
+![GameMaker](https://img.shields.io/badge/GameMaker-GML-orange)
 ![Python 3.7+](https://img.shields.io/badge/Python-3.7+-green)
 
 ## Overview
@@ -22,7 +27,7 @@ This project implements a fully functional digital version of Warhammer Age of S
 - **Objective Control**: Victory point scoring and objective control
 - **Damage System**: Damage allocation, ward saves, and model removal
 
-### Graphics Mode (NEW!)
+### Graphics Mode (Python + Pygame)
 - **2D Visual Battlefield**: 44" × 60" battlefield with grid
 - **Interactive Units**: Click to select, view stats in real-time
 - **Range Indicators**: Visual movement and combat ranges
@@ -30,39 +35,76 @@ This project implements a fully functional digital version of Warhammer Age of S
 - **Info Panel**: Live game state and unit details
 - **60 FPS Rendering**: Smooth, responsive graphics
 
+### GameMaker Version Features
+- **Professional 2D Graphics**: Polished visual presentation
+- **WASD Camera Controls**: Smooth camera movement and zoom
+- **Mouse-Driven Gameplay**: Left-click select, right-click command
+- **Box Selection**: Click and drag to select multiple units
+- **Real-Time Combat**: Automatic combat resolution with visual feedback
+- **Complete UI System**: Top bar, bottom panel, right controls
+- **Hotkey System**: Quick access to all game functions
+- **See**: `/AgeOfSigmarGM/` folder for complete GameMaker project
+
 ## System Requirements
 
+### Python Version
 - Python 3.7 or higher
 - **Optional**: Pygame 2.5+ for graphics mode
   ```bash
   pip install pygame
   ```
 
+### GameMaker Version
+- GameMaker Studio 2 (version 2023.8 or later)
+- Windows, Mac, or Linux
+- **No additional dependencies!**
+- Open `/AgeOfSigmarGM/AgeOfSigmarGM.yyp` in GameMaker and press F5 to play!
+
 ## File Structure
 
 ```
 AgeOfSigmar/
-├── main.py                  # Main program and menu system
-├── data_types.py            # All data classes and enums
-├── game_state.py            # Global game state management
-├── utilities.py             # Utility functions (dice, distance, etc.)
-├── file_operations.py       # Loading/saving game data
-├── army_builder.py          # Army roster creation
-├── battlefield.py           # Battlefield setup and deployment
-├── movement.py              # Movement phase mechanics
-├── shooting.py              # Shooting phase
-├── combat.py                # Combat phase and attack resolution
-├── damage.py                # Damage allocation and model removal
-├── objectives.py            # Objective control and scoring
-├── battle.py                # Battle rounds and turn management
-├── graphics_engine.py       # 2D graphics rendering engine (NEW!)
-├── graphical_game.py        # Graphical game mode (NEW!)
-├── Warscrolls_StormcastEternals.txt  # Stormcast warscroll data
-├── Warscrolls_Skaven.txt    # Skaven warscroll data
-├── requirements.txt         # Python package dependencies
-├── README.md                # This file
-├── QUICKSTART.md            # Quick start guide
-└── GRAPHICS_GUIDE.md        # Graphics mode guide (NEW!)
+├── PYTHON VERSION
+│   ├── main.py                  # Main program and menu system
+│   ├── data_types.py            # All data classes and enums
+│   ├── game_state.py            # Global game state management
+│   ├── utilities.py             # Utility functions (dice, distance, etc.)
+│   ├── file_operations.py       # Loading/saving game data
+│   ├── army_builder.py          # Army roster creation
+│   ├── battlefield.py           # Battlefield setup and deployment
+│   ├── movement.py              # Movement phase mechanics
+│   ├── shooting.py              # Shooting phase
+│   ├── combat.py                # Combat phase and attack resolution
+│   ├── damage.py                # Damage allocation and model removal
+│   ├── objectives.py            # Objective control and scoring
+│   ├── battle.py                # Battle rounds and turn management
+│   ├── graphics_engine.py       # 2D graphics rendering engine
+│   ├── graphical_game.py        # Graphical game mode
+│   ├── input_handler.py         # Mouse & keyboard input system
+│   ├── ui_components.py         # UI buttons, panels, tooltips
+│   ├── Warscrolls_StormcastEternals.txt  # Stormcast warscroll data
+│   ├── Warscrolls_Skaven.txt    # Skaven warscroll data
+│   ├── requirements.txt         # Python package dependencies
+│   ├── README.md                # This file
+│   ├── QUICKSTART.md            # Quick start guide
+│   └── GRAPHICS_GUIDE.md        # Graphics mode guide
+│
+└── GAMEMAKER VERSION
+    └── AgeOfSigmarGM/           # Complete GameMaker Studio 2 project
+        ├── AgeOfSigmarGM.yyp    # GameMaker project file (OPEN THIS!)
+        ├── scripts/             # GML scripts (4 core systems)
+        │   ├── scr_core_data/   # Data structures & enums
+        │   ├── scr_combat/      # Combat resolution
+        │   ├── scr_movement/    # Movement mechanics
+        │   └── scr_helpers/     # Utilities & setup
+        ├── objects/             # GameMaker objects
+        │   ├── obj_game_controller/      # Main game loop
+        │   └── obj_battlefield_renderer/ # Visual rendering
+        ├── rooms/               # Game rooms
+        │   └── rm_battlefield/  # Main battlefield (1600×900)
+        ├── README_GAMEMAKER.md  # Complete GameMaker documentation
+        ├── QUICKSTART_GAMEMAKER.md       # Quick start tutorial
+        └── GAMEMAKER_IMPLEMENTATION_SUMMARY.md  # Full summary
 ```
 
 ## How to Run
