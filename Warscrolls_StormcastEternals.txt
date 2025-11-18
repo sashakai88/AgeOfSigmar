@@ -1,0 +1,11 @@
+UnitName	Move	Health	Control	Save	UnitSize	Points	Keywords	Weapons	Abilities
+Lord-Imperatant	12	5	2	3	1	180	HERO,INFANTRY,WARD,ORDER,STORMCAST ETERNALS	Thunderbolt Axe[MELEE,4,3,3,1,2,1]	Guided by Lightning
+Liberators	5	2	1	4	5	110	INFANTRY,BATTLELINE,ORDER,STORMCAST ETERNALS	Warhammer[MELEE,2,4,3,1,1,1]	Lay Low the Tyrants
+Vindictors	5	2	1	4	5	130	INFANTRY,ORDER,STORMCAST ETERNALS	Stormspear[MELEE,2,3,3,1,1,2]	Champion,Standard Bearer
+Judicators	5	2	1	4	5	180	INFANTRY,ORDER,STORMCAST ETERNALS	Skybolt Bow[RANGED,2,3,4,1,1,18]	Chained Lightning
+Annihilators	5	3	1	3	3	180	INFANTRY,ORDER,STORMCAST ETERNALS	Meteoric Grandhammer[MELEE,3,3,3,2,3,1]	Blazing Impact
+Prosecutors	12	2	1	4	3	100	INFANTRY,FLY,ORDER,STORMCAST ETERNALS	Celestial Hammers[MELEE,2,4,3,0,1,1];Stormsurge Trident[RANGED,1,3,3,0,1,18]	Swift as the Wind
+Knight-Arcanum	12	5	2	4	1	150	HERO,INFANTRY,WIZARD,ORDER,STORMCAST ETERNALS	Aetherstave[MELEE,3,3,3,1,2,1]	Arcane Bolt,Mystic Shield
+Lord-Relictor	12	5	2	4	1	145	HERO,INFANTRY,PRIEST,ORDER,STORMCAST ETERNALS	Relic Hammer[MELEE,4,3,3,1,2,1]	Lightning Storm
+Vanquishers	5	3	1	3	5	200	INFANTRY,ORDER,STORMCAST ETERNALS	Celestial Greatsword[MELEE,3,3,3,2,2,1]	Vanguard of Sigmar
+Dracothian Guard	10	5	2	3	3	250	CAVALRY,ORDER,STORMCAST ETERNALS	Stormstrike Glaive[MELEE,4,3,3,1,2,1];Dracoth Claws[MELEE,4,4,3,1,2,1]	Intolerable Damage

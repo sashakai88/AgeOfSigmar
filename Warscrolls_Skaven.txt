@@ -1,0 +1,11 @@
+UnitName	Move	Health	Control	Save	UnitSize	Points	Keywords	Weapons	Abilities
+Grey Seer	6	5	2	5	1	140	HERO,INFANTRY,WIZARD,CHAOS,SKAVEN	Warpstone Staff[MELEE,3,4,3,0,1,1]	Warp Lightning,Mystic Shield
+Clanrats	6	1	1	5	20	120	INFANTRY,BATTLELINE,CHAOS,SKAVEN	Rusty Blade[MELEE,1,4,4,0,1,1]	Strength in Numbers
+Stormvermin	6	1	1	4	10	140	INFANTRY,CHAOS,SKAVEN	Halberd[MELEE,2,3,3,1,1,1]	Elite Warriors
+Plague Monks	6	1	1	6	20	160	INFANTRY,CHAOS,SKAVEN,NURGLE	Foetid Blades[MELEE,2,4,3,0,1,1]	Frenzied Assault
+Warplock Jezzails	6	2	1	5	3	110	INFANTRY,CHAOS,SKAVEN	Warplock Jezzail[RANGED,2,3,3,2,2,24]	Crack Shot
+Plague Priest	6	5	2	6	1	100	HERO,INFANTRY,PRIEST,CHAOS,SKAVEN,NURGLE	Warpstone-tipped Staff[MELEE,3,4,3,0,2,1]	Pestilence Prayers
+Verminlord Warpseer	12	12	5	4	1	340	HERO,MONSTER,WIZARD,CHAOS,SKAVEN	Doom Glaive[MELEE,6,3,3,2,3,1];Prehensile Tail[MELEE,1,3,3,1,D3,1]	Scry the Future
+Rat Ogres	7	5	2	5	3	150	INFANTRY,CHAOS,SKAVEN	Warpfire Gun[RANGED,D6,4,3,1,1,12];Crushing Blows[MELEE,3,4,3,1,2,1]	Mindless Brutes
+Gutter Runners	8	1	1	6	5	70	INFANTRY,CHAOS,SKAVEN	Throwing Stars[RANGED,2,4,4,0,1,12];Punch Daggers[MELEE,2,4,4,0,1,1]	Sneaky Infiltrators
+Warp Lightning Cannon	3	7	2	4	1	180	WAR MACHINE,CHAOS,SKAVEN	Warp Lightning Blast[RANGED,1,3,3,3,D6,24]	More-More Warp Lightning
