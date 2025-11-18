@@ -1,0 +1,41 @@
+{
+  "resourceType": "GMProject",
+  "resourceVersion": "1.6",
+  "name": "AgeOfSigmarGM",
+  "resources": [
+    {"id":{"name":"scr_core_data","path":"scripts/scr_core_data/scr_core_data.yy"}},
+    {"id":{"name":"scr_combat","path":"scripts/scr_combat/scr_combat.yy"}},
+    {"id":{"name":"scr_movement","path":"scripts/scr_movement/scr_movement.yy"}},
+    {"id":{"name":"scr_helpers","path":"scripts/scr_helpers/scr_helpers.yy"}},
+    {"id":{"name":"obj_game_controller","path":"objects/obj_game_controller/obj_game_controller.yy"}},
+    {"id":{"name":"obj_battlefield_renderer","path":"objects/obj_battlefield_renderer/obj_battlefield_renderer.yy"}},
+    {"id":{"name":"rm_battlefield","path":"rooms/rm_battlefield/rm_battlefield.yy"}}
+  ],
+  "Options": [],
+  "defaultScriptType": 1,
+  "isEcma": false,
+  "configs": {
+    "name": "Default",
+    "children": []
+  },
+  "RoomOrderNodes": [
+    {"roomId":{"name":"rm_battlefield","path":"rooms/rm_battlefield/rm_battlefield.yy"}}
+  ],
+  "Folders": [
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scripts","folderPath":"folders/Scripts.yy","order":0},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Objects","folderPath":"folders/Objects.yy","order":1},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Rooms","folderPath":"folders/Rooms.yy","order":2},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Sprites.yy","order":3},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sounds","folderPath":"folders/Sounds.yy","order":4}
+  ],
+  "AudioGroups": [
+    {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1}
+  ],
+  "TextureGroups": [
+    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","isScaled":true,"compressFormat":"bz2","loadType":"default","directory":"","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1}
+  ],
+  "IncludedFiles": [],
+  "MetaData": {
+    "IDEVersion": "2023.8.2.108"
+  }
+}
