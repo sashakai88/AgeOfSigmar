@@ -295,4 +295,37 @@ function place_objectives() {
     show_debug_message("Placed " + string(ds_list_size(global.objectives)) + " objectives");
 }
 
+/// @function spawn_unit(_warscroll_id, _x, _y, _player, _model_count)
+/// @description Spawn a unit on the battlefield
+/// @param {real} _warscroll_id Index of warscroll in global.warscrolls (0=Liberators, 1=Clanrats)
+/// @param {real} _x X position in inches
+/// @param {real} _y Y position in inches
+/// @param {real} _player Owner player (1 or 2)
+/// @param {real} _model_count Number of models in unit
+function spawn_unit(_warscroll_id, _x, _y, _player, _model_count) {
+    var _unit = new BattlefieldUnit();
+    _unit.warscroll_ref = _warscroll_id;
+    _unit.x_pos = _x;
+    _unit.y_pos = _y;
+    _unit.owner_player = _player;
+    _unit.model_count = _model_count;
+
+    // Get warscroll to determine health per model
+    var _warscroll = global.warscrolls[| _warscroll_id];
+
+    // Create model array with proper health tracking
+    _unit.models = [];
+    for (var i = 0; i < _model_count; i++) {
+        var _model = new UnitModel();
+        _model.damage_allocated = 0;
+        array_push(_unit.models, _model);
+    }
+
+    ds_list_add(global.battlefield_units, _unit);
+
+    show_debug_message("Spawned " + _warscroll.unit_name + " at (" + string(_x) + ", " + string(_y) + ")");
+
+    return _unit;
+}
+
 show_debug_message("Helper functions loaded");

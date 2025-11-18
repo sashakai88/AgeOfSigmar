@@ -34,7 +34,24 @@ load_sample_warscrolls();
 // Place objectives
 place_objectives();
 
+// ===================================================================
+// SPAWN STARTING UNITS - CUSTOMIZE HERE!
+// ===================================================================
+// Usage: spawn_unit(warscroll_id, x_inches, y_inches, player, model_count)
+// Warscroll IDs: 0=Liberators, 1=Clanrats (add more in load_sample_warscrolls())
+
+// Player 1 (Blue) - Stormcast Eternals
+spawn_unit(0, 10, 54, 1, 5);  // Liberators at (10", 54")
+spawn_unit(0, 20, 54, 1, 5);  // Liberators at (20", 54")
+spawn_unit(0, 30, 52, 1, 5);  // Liberators at (30", 52")
+
+// Player 2 (Red) - Skaven
+spawn_unit(1, 15, 6, 2, 20);  // Clanrats at (15", 6")
+spawn_unit(1, 25, 8, 2, 20);  // Clanrats at (25", 8")
+spawn_unit(1, 35, 6, 2, 20);  // Clanrats at (35", 6")
+
 show_debug_message("Game Controller initialized");
 show_debug_message("=== WARHAMMER AGE OF SIGMAR ===");
 show_debug_message("GameMaker Edition");
+show_debug_message("Spawned " + string(ds_list_size(global.battlefield_units)) + " units");
 show_debug_message("Ready to play!");
